@@ -54,7 +54,7 @@ def create_embeddings(text):
 # then send this text-chunk into vector store for further retrieval
 
 
-def get_vectorstore(text_chunks):
+def get_vectorstore(text_chunks): #chnages to be made here vectorstore ko milvus banana hai
     embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-base")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
