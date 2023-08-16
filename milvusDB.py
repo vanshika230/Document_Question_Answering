@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 
 # Replace 'path_to_folder' with the actual path to your folder containing PDFs
-folder_path = 'pdfs'
+folder_path = 'docs'
 
 # List all files in the folder
 pdf_files = [file for file in os.listdir(folder_path) if file.endswith('.pdf')]
