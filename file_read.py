@@ -1,11 +1,6 @@
 import os
-import PyPDF2
 from helper_fns import *
 from tqdm import tqdm 
-
-import os
-import PyPDF2
-from tqdm import tqdm  # For progress bar
 
 
 # Replace 'path_to_folder' with the actual path to your folder containing PDFs
@@ -30,10 +25,5 @@ for pdf_file in pdf_files:
         print(chunk)
 
 
-print("starting ingestion")
-
-vector_Store = get_vectorstore(chunks)
-
-vector_Store.save_local("sunbird_data")
-
-print("vector store created")
+# check functioning of preprocessing function with print statements
+# modified and used in milvusDB.py
