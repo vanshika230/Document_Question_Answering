@@ -25,6 +25,10 @@ def get_text_chunks(text):
     chunks = text_splitter.split_text(text)
     return chunks
 
+def preprocess_text(text_chunks):
+    text = text.lower()
+    return text
+
 def coreferencing(text):
     nlp = spacy.load("en_coreference_web_trf")
     doc = nlp (text)
